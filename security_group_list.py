@@ -28,6 +28,8 @@ for group in neutron_client.list_security_groups()["security_groups"]:
         print u" ID:                 " + security_group_rules["id"]
         if security_group_rules["protocol"] is not None:
             print u"  protocol:          " + security_group_rules["protocol"]
+        else:
+            print u"  protocol:          " + "any"                
         print u"  direction:         " + security_group_rules["direction"]
         print u"  ethertype:         " + security_group_rules["ethertype"]
         if security_group_rules["remote_ip_prefix"] is not None:
